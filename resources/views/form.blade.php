@@ -24,7 +24,10 @@
                        name="name"
                        placeholder="Name"
                        aria-label="name"
-                       value="{{ isset($user) ? $user->name : null }}">
+                       value="{{ old('name', isset($user) ? $user->name : null) }}">
+                @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
         </div>
         <div class="row mt-3">
@@ -34,7 +37,10 @@
                        name="email"
                        placeholder="Email"
                        aria-label="email"
-                       value="{{ isset($user) ? $user->email : null }}">
+                       value="{{ old('email', isset($user) ? $user->email : null) }}">
+                @error('email')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
         </div>
         <div class="row mt-4">

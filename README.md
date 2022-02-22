@@ -8,7 +8,7 @@ install Composer
 
 install cd /var/www/
 
-git clone ... folder
+git clone https://github.com/bersen8106/crudappapanel.git folder
 
 cd folder
 
